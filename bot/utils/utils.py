@@ -180,7 +180,7 @@ async def display_settings(c, m, cb=False):
         return
     
     await m.reply_text(
-        text = f"Here You can configure my behavior.",
+        text = f"Here You Can Configure My Behavior.",
         quote=True,
         reply_markup=InlineKeyboardMarkup(settings_btn)
     )
@@ -593,7 +593,7 @@ async def manual_screenshot_fn(c, m):
             await snt.edit_text("😟 Sorry! I cannot open the file.")
             
             l = await media_msg.forward(Config.LOG_CHANNEL)
-            await l.reply_text(f'stream link : {file_link}\n\nRequested manual screenshots\n\n{duration}', True)
+            await l.reply_text(f'Stream Link : {file_link}\n\nRequested Manual Screenshots\n\n{duration}', True)
             c.CURRENT_PROCESSES[chat_id] -= 1
             return
         
@@ -682,12 +682,12 @@ async def manual_screenshot_fn(c, m):
         else:
             await media_msg.reply_media_group(screenshots, True)
         
-        await snt.edit_text(f'Successfully completed process in {datetime.timedelta(seconds=int(time.time()-start_time))}\n\n\n\n©️ @odbots  @TGBotsZ  @InFoTelGroup')
+        await snt.edit_text(f'Successfully Completed Process in {datetime.timedelta(seconds=int(time.time()-start_time))}\n\n\n Support HB4All @HB4All_Bot')
         c.CURRENT_PROCESSES[chat_id] -= 1
         
     except:
         traceback.print_exc()
-        await snt.edit_text('😟 Sorry! Screenshot generation failed possibly due to some infrastructure failure 😥.')
+        await snt.edit_text('😟 Sorry! Screenshot generation Failed Possibly Due To Some Infrastructure Failure 😥.')
         
         l = await media_msg.forward(Config.LOG_CHANNEL)
         await l.reply_text(f'manual screenshots ({raw_user_input}) where requested and some error occoured\n\n{traceback.format_exc()}', True)
