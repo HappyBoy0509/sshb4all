@@ -15,17 +15,17 @@ async def start(c, m):
         )
     
     await m.reply_text(
-        text=f"Hi there {m.from_user.first_name}.\n\nI'm Screenshot Generator Bot. I can provide screenshots from your video files with out downloading the entire file (almost instantly). For more details check /help.",
+        text=f"Hi {m.from_user.first_name}.\n\nI'm Screenshot Generator RoBot. I Can Provide Screenshots From Your Video Files Without Downloading The Entire File (almost instantly). For More Details check /help.",
         quote=True,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('📌  Support Group', url='https://t.me/InFoTelGroup'),
-                    InlineKeyboardButton('🔖  Projects Channel', url='https://t.me/TGBotsZ')
+                    InlineKeyboardButton('📌  Support Group', url='https://t.me/HB4All'),
+                    InlineKeyboardButton('🔖  More', url='https://t.me/HB4All_Bot')
                 ],
                 [
-                    InlineKeyboardButton('💡  Source Code', url='https://github.com/TGExplore/Screenshot-Bot'),
-                    InlineKeyboardButton('👨  Master', url='https://t.me/odbots')
+                    InlineKeyboardButton('🤖 HB4All Bots', url='https://t.me/BotlistHB4All'),
+                    InlineKeyboardButton('👨  Master', url='https://t.me/happyboy59')
                 ]
             ]
         )
